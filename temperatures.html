@@ -1,0 +1,24 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Температуры — DISTILL CONTROL</title><style>
+*{box-sizing:border-box}body{margin:0;background:#101a14;color:#fff;font-family:Arial,sans-serif}
+header{padding:12px 16px;background:#172b20;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:2}
+a,button{cursor:pointer}header a,.btn{display:inline-block;text-decoration:none;color:#fff;background:#87531d;border:1px solid #e6bd70;border-radius:10px;padding:10px 14px;font-weight:bold}
+h1{font-size:clamp(20px,4vw,32px);margin:0;flex:1}
+main{max-width:1100px;margin:0 auto;padding:14px}
+.hero{width:100%;height:auto;display:block;border:2px solid #b98a45;border-radius:14px}
+.card{background:linear-gradient(145deg,#29432f,#111c16);border:1px solid #b98a45;border-radius:14px;padding:16px;margin-top:14px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #ffffff25}
+input,select{max-width:180px;width:42%;padding:10px;border-radius:8px;border:1px solid #c69a51;font-size:16px}
+.btn{margin:12px 8px 0 0}
+.small{font-size:13px;line-height:1.45;color:#e6d8bd}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.tile{display:block;color:white;text-decoration:none;background:#49351f;border:1px solid #d0a45e;border-radius:12px;padding:12px;text-align:center}
+@media(max-width:650px){.tiles{grid-template-columns:repeat(2,1fr)}header{padding:9px}header a{padding:8px;font-size:14px}.row{font-size:14px}}
+</style></head><body>
+<header><a href="index.html">← Главная</a><h1>Температуры</h1><a href="index.html">⌂</a></header>
+<main><img class="hero" src="temperatures.jpg" alt="Температуры — Данков">
+<section class="card"><h2>Температуры</h2><label class="row"><span>Температура кипения</span><span><input data-key="Температуры_0" value="78.0"> °C</span></label><label class="row"><span>Температура отбора</span><span><input data-key="Температуры_1" value="82.0"> °C</span></label><label class="row"><span>Гистерезис</span><span><input data-key="Температуры_2" value="0.5"> °C</span></label><button class="btn" onclick="save()">Сохранить</button><a class="btn" href="index.html">На главную</a></section>
+<p class="small">Демонстрационная страница. Значения сохраняются только в этом браузере. Связь с ОВЕН ПР200 пока не подключена; изображённые показания не являются реальными измерениями. Не используйте страницу для управления нагревом.</p></main>
+<script>
+document.querySelectorAll('input[data-key]').forEach(e=>{const v=localStorage.getItem(e.dataset.key);if(v!==null)e.value=v});
+function save(){document.querySelectorAll('input[data-key]').forEach(e=>localStorage.setItem(e.dataset.key,e.value));alert('Настройки сохранены в этом браузере')}
+</script></body></html>

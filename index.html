@@ -1,0 +1,23 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DISTILL CONTROL — Данков</title><style>
+*{box-sizing:border-box}body{margin:0;background:#101a14;color:#fff;font-family:Arial,sans-serif}
+header{padding:12px 16px;background:#172b20;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:2}
+a,button{cursor:pointer}header a,.btn{display:inline-block;text-decoration:none;color:#fff;background:#87531d;border:1px solid #e6bd70;border-radius:10px;padding:10px 14px;font-weight:bold}
+h1{font-size:clamp(20px,4vw,32px);margin:0;flex:1}
+main{max-width:1100px;margin:0 auto;padding:14px}
+.hero{width:100%;height:auto;display:block;border:2px solid #b98a45;border-radius:14px}
+.card{background:linear-gradient(145deg,#29432f,#111c16);border:1px solid #b98a45;border-radius:14px;padding:16px;margin-top:14px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #ffffff25}
+input,select{max-width:180px;width:42%;padding:10px;border-radius:8px;border:1px solid #c69a51;font-size:16px}
+.btn{margin:12px 8px 0 0}
+.small{font-size:13px;line-height:1.45;color:#e6d8bd}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.tile{display:block;color:white;text-decoration:none;background:#49351f;border:1px solid #d0a45e;border-radius:12px;padding:12px;text-align:center}
+@media(max-width:650px){.tiles{grid-template-columns:repeat(2,1fr)}header{padding:9px}header a{padding:8px;font-size:14px}.row{font-size:14px}}
+
+.stage{position:relative;max-width:1536px;margin:10px auto;line-height:0}.stage img{width:100%;height:auto;display:block;border-radius:12px}.hot{position:absolute;border:0;background:transparent;cursor:pointer;border-radius:10px}.hot:focus-visible{outline:3px solid gold;background:#fff2}
+#graphs{left:0;top:45%;width:34.5%;height:29%}#settings{left:35%;top:45%;width:31%;height:29%}#temps{left:66%;top:45%;width:34%;height:29%}#params{left:0;top:74%;width:34.5%;height:26%}#safety{left:35%;top:74%;width:31%;height:26%}#about{left:66%;top:74%;width:34%;height:26%}
+</style></head><body><header><h1>DISTILL CONTROL — Данков</h1><span>Главное меню</span></header>
+<main><div class="stage"><img src="dashboard.jpg" alt="Панель управления DISTILL CONTROL">
+<a class="hot" id="graphs" href="graphs.html" aria-label="Открыть графики"></a><a class="hot" id="settings" href="settings.html" aria-label="Открыть настройки"></a><a class="hot" id="temps" href="temperatures.html" aria-label="Открыть температуры"></a><a class="hot" id="params" href="parameters.html" aria-label="Открыть параметры работы"></a><a class="hot" id="safety" href="protections.html" aria-label="Открыть защиты"></a><a class="hot" id="about" href="about.html" aria-label="О системе"></a></div>
+<div class="tiles"><a class="tile" href="graphs.html">📈 Графики</a><a class="tile" href="settings.html">⚙ Настройки</a><a class="tile" href="temperatures.html">🌡 Температуры</a><a class="tile" href="parameters.html">Параметры работы</a><a class="tile" href="protections.html">🛡 Защиты</a><a class="tile" href="about.html">ℹ О системе</a></div>
+<p class="small">Нажимай прямо на разделы картинки или на ссылки ниже — откроются отдельные страницы. Демо-версия: реальные данные и управление ПР200 пока не подключены.</p></main></body></html>
